@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Для Сонечки ❤️</title>
+  <meta name="description" content="Любовная открытка — специально для тебя, Сонечка">
+  <meta name="theme-color" content="#2b1226">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Для Сонечки">
+  <meta property="og:title" content="Для Сонечки ❤️">
+  <meta property="og:description" content="Открой меня — тут спрятано кое-что особенное…">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 88C20 65 8 47 8 32 8 18 19 8 32 8c8 0 15 4 18 11 3-7 10-11 18-11 13 0 24 10 24 24 0 15-12 33-42 56z' fill='%23ff5e8a'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+  <!-- Фон: падающие лепестки и искорки -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===== Обложка с конвертом ===== -->
+  <div class="cover" id="cover">
+    <div class="cover-stars" aria-hidden="true"></div>
+    <p class="cover-to">для моей сонечки&nbsp;☀️</p>
+
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-letter"><span>Я люблю тебя,<br>Сонечка&nbsp;❤</span></div>
+      <div class="env-side env-side-l"></div>
+      <div class="env-side env-side-r"></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <div class="env-seal">❤</div>
+    </div>
+
+    <button class="open-btn" id="open-btn">Нажми, чтобы открыть</button>
+    <p class="cover-hint">тут спрятано кое-что особенное…</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== Главный экран ===== -->
+    <section class="hero">
+      <div class="sun-glow" aria-hidden="true"></div>
+      <div class="hero-hearts" aria-hidden="true">
+        <span class="float-heart" style="--x: 8%;  --d: 0s;   --t: 12s;">💗</span>
+        <span class="float-heart" style="--x: 22%; --d: 2.5s; --t: 15s;">✨</span>
+        <span class="float-heart" style="--x: 38%; --d: 5s;   --t: 11s;">❤️</span>
+        <span class="float-heart" style="--x: 58%; --d: 1.2s; --t: 14s;">🌸</span>
+        <span class="float-heart" style="--x: 74%; --d: 3.8s; --t: 12s;">💖</span>
+        <span class="float-heart" style="--x: 88%; --d: 6.2s; --t: 16s;">💛</span>
+        <span class="float-heart" style="--x: 48%; --d: 8s;   --t: 13s;">✨</span>
+      </div>
+
+      <p class="hero-eyebrow reveal">моя любимая</p>
+      <h1 class="reveal">Для моей <span class="grad">Сонечки</span></h1>
+      <p class="hero-sub reveal">Ты — моё солнышко, моё любимое утро и самая красивая причина улыбаться.<br>Эта открытка — только для тебя ☀️❤️</p>
+
+      <div class="scroll-hint" aria-hidden="true">листай вниз <span class="arrow">↓</span></div>
+    </section>
+
+    <!-- ===== Сюрпризы ===== -->
+    <section class="section">
+      <h2 class="section-title reveal">Маленькие <span class="grad">сюрпризы</span></h2>
+      <p class="section-sub reveal">Здесь всё спрятано — нажми на каждую карточку 💌</p>
+
+      <div class="surprise-grid">
+        <button class="flip-card reveal" type="button">
+          <span class="flip-inner">
+            <span class="flip-front">
+              <span class="flip-icon">🎁</span>
+              <span class="flip-hint">Нажми меня</span>
+            </span>
+            <span class="flip-back">Ты красивая даже в понедельник утром — и это нечестно 😍</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button">
+          <span class="flip-inner">
+            <span class="flip-front">
+              <span class="flip-icon">🌙</span>
+              <span class="flip-hint">Нажми меня</span>
+            </span>
+            <span class="flip-back">Твой смех — мой любимый звук на всём свете</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button">
+          <span class="flip-inner">
+            <span class="flip-front">
+              <span class="flip-icon">🌧️</span>
+              <span class="flip-hint">Нажми меня</span>
+            </span>
+            <span class="flip-back">С тобой даже дождь кажется романтикой</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button">
+          <span class="flip-inner">
+            <span class="flip-front">
+              <span class="flip-icon">💫</span>
+              <span class="flip-hint">Нажми меня</span>
+            </span>
+            <span class="flip-back">Я бы выбрал тебя снова. И снова. И снова.</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Галерея ===== -->
+    <section class="section">
+      <h2 class="section-title reveal">Наши <span class="grad">моменты</span></h2>
+      <p class="section-sub reveal">Каждая фотография — маленькая история ❤️ <br>Нажми на фото, чтобы рассмотреть поближе</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <!-- ===== Письмо ===== -->
+    <section class="section">
+      <h2 class="section-title reveal">Письмо <span class="grad">для тебя</span></h2>
+      <div class="letter-card reveal">
+        <p>Сонечка,</p>
+        <p>когда ты рядом, даже обычный день становится тёплым и светлым — как будто солнце вышло специально для меня. Спасибо, что ты есть: за твой смех, за твои объятия, за то, как ты щуришься, когда улыбаешься.</p>
+        <p>Я не знаю, сколько звёзд на небе. Но знаю точно: ни одна из них не светит так, как ты.</p>
+        <p>Люблю тебя больше, чем вчера, и меньше, чем завтра.</p>
+        <p class="letter-sign">Твой — навсегда ❤</p>
+      </div>
+    </section>
+
+    <!-- ===== Загадка ===== -->
+    <section class="section secret">
+      <h2 class="section-title reveal">Загадка</h2>
+      <p class="section-sub reveal">Кажется, у этого солнышка есть секрет…<br>Нажми на него <b>три раза</b></p>
+      <button class="sun-btn reveal" id="sun-btn" aria-label="Солнышко с секретом">☀️</button>
+      <p class="sun-progress" id="sun-progress"></p>
+    </section>
+
+    <!-- ===== Финал ===== -->
+    <section class="section finale">
+      <div class="big-heart reveal" aria-hidden="true">❤️</div>
+      <h2 class="section-title reveal">Ты — моё <span class="grad">солнце</span></h2>
+      <p class="section-sub reveal">И это никогда не изменится</p>
+      <button class="love-btn reveal" id="love-btn">Нажми, если любишь меня 💗</button>
+      <p class="love-response" id="love-response"></p>
+    </section>
+
+    <footer class="footer">
+      <p>Сделано с бесконечной любовью ❤️ · специально для Сонечки</p>
+    </footer>
+  </main>
+
+  <!-- ===== Просмотр фото ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-top">
+      <span class="lb-counter" id="lb-counter"></span>
+      <button class="lb-close" id="lb-close" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="lb-media" id="lb-media">
+      <button class="lb-nav lb-prev" id="lb-prev" aria-label="Предыдущее фото">‹</button>
+      <img id="lb-img" alt="">
+      <button class="lb-nav lb-next" id="lb-next" aria-label="Следующее фото">›</button>
+    </div>
+    <p class="lb-caption" id="lb-caption"></p>
+  </div>
+
+  <!-- ===== Секрет ===== -->
+  <div class="secret-overlay" id="secret-overlay" aria-hidden="true">
+    <div class="secret-card">
+      <button class="secret-close" id="secret-close" aria-label="Закрыть">✕</button>
+      <div class="secret-emoji">✨</div>
+      <h3>Секрет раскрыт!</h3>
+      <p>Знаешь, в чём главный секрет? Ты — лучшее, что случалось в моей жизни. И я бы принял это решение снова — в любой вселенной, в любой момент времени.</p>
+      <p class="secret-sign">люблю тебя, сонечка ❤</p>
+    </div>
+  </div>
+
+  <script src="js/photos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
